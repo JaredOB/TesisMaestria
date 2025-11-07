@@ -1,0 +1,564 @@
+\documentclass[12pt,oneside,openany]{book} 
+\setcounter{tocdepth}{3}
+\usepackage{makeidx}           % allows index generation
+\usepackage[dvips]{graphicx}          % standard LaTeX graphics to  when including figure files
+\usepackage{multicol}          % used for the two-column index
+\usepackage[dvips]{epsfig}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{pifont}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage[spanish,es-noshorthands]{babel}
+%\usepackage[toc]{appendix}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+\usepackage[subfigure,titles]{tocloft}
+\usepackage{subfigure}         % for put subfigure
+\usepackage{soul}
+\usepackage{multirow}
+\usepackage{centernot}
+\usepackage{enumitem}
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+		\node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+\spanishdecimal{.}
+\usepackage{multirow}
+\usepackage{longtable}
+\renewcommand\cftchapaftersnum{.}
+\renewcommand\cftsecaftersnum{.}
+\renewcommand\cftsubsecaftersnum{.}
+\renewcommand\cftsubsubsecaftersnum{.}
+\usepackage{verbatim}
+\renewcommand\spanishtablename{Tabla}
+\renewcommand\spanishbibname{Referencias}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Instituto Politécnico Nacional}
+\lhead{Protocolo de tesis}
+\rfoot{\thepage}
+
+%\setlength{\oddsidemargin}{0.25in}
+%\setlength{\evensidemargin}{0.1in}
+%\setlength{\textwidth}{6.2in}
+%\setlength{\topmargin}{0.0in}
+%\setlength{\textheight}{9.1in}
+
+\setlength{\oddsidemargin}{0.25in}
+\setlength{\evensidemargin}{0.1in}
+\setlength{\textwidth}{6.2in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\textheight}{9in}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newtheorem{propa}{Proposici\'{o}n}
+\newtheorem{remarka}{Comentario}
+\newtheorem{theorem}{Teorema}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Ejemplo}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposición}
+\newtheorem{remark}[theorem]{Comentario}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Demostración]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{graphicx}
+
+
+
+
+
+\thispagestyle{empty}
+
+
+\begin{document}
+\begin{center}
+	{\leftskip=-0.5in \mbox{ %\leftskip=-0.6in
+			\begin{tabular}[c]{c}
+				
+				%\includegraphics[bb = 0 0 677 935,scale=0.102]{1_PORTADA/logoipn.jpg}
+				\includegraphics[scale=0.85]{figuras/IPN.eps}
+				
+			\end{tabular}
+			
+			\hspace{-0.1 in}%{-0.35 in}
+			\begin{tabular}[c]{c}
+				\Large \textbf{INSTITUTO POLIT\'ECNICO NACIONAL}\\ \\ \\
+				\hspace{-0.1in} \large CENTRO DE INNOVACIÓN Y DESARROLLO\\ 
+				\hspace{-0.1in} \large TECNOLÓGICO EN CÓMPUTO \\
+			\end{tabular}
+			\hspace*{-0.2in}
+			\begin{tabular}[c]{c}
+			\includegraphics[scale=.4]{figuras/logo-cidetec.eps}
+			\end{tabular}
+		}
+		\par
+}	
+	\vspace*{0.75in}
+
+	\large{\textbf{APLICACIONES DE CONVERTIDORES ELECTRÓNICOS DE POTENCIA EN ROBÓTICA MÓVIL}}\\
+	
+	
+	
+	\vspace*{0.65in}
+	
+	\makebox[0.55\textwidth][s]{\large \textbf{T E S I S}}\\
+	\vspace*{0.2in}
+	\makebox[0.55\textwidth][s]{\normalsize QUE PARA OBTENER EL GRADO DE:}\\
+	\vspace*{0.2in}
+	\large{\textbf{MAESTRÍA EN TECNOLOGÍA DE CÓMPUTO}}\\
+	
+	\vspace*{0.75in}
+	
+	\makebox[0.55\textwidth][s]{\normalsize P R E S E N T A:}\\ %
+	\vspace*{0.15in}
+	\makebox[0.61\textwidth]{\large \textbf{Ing. Benjamin Natanael Santiago Nogales}}\\
+	
+	\vspace*{0.75in}
+	
+	
+	\centerline{\normalsize DIRECTORES DE TESIS:}
+	\vspace*{0.125in}
+	\scshape{
+		Dr. Ramón Silva Ortigoza  \\
+		Dra. Magdalena Marciano Melchor\\
+	}
+	
+	
+	\vspace*{1in}
+	
+	\leftline{\large Ciudad de México, México} \vspace*{-0.25in} \rightline{\large
+		JUNIO 2025}
+	
+	
+\end{center}
+\newpage
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+
+
+
+\chapter{Introducción}
+
+La robótica móvil es una disciplina que evoluciona rápidamente y se actualiza continuamente debido a las múltiples ventajas y aplicaciones potenciales de los robots móviles en diversos entornos \cite{ref_journal1}. En particular, los robots móviles de ruedas (RMR) se han convertido en el tipo de locomoción más común para el desarrollo, la investigación y la aplicación de robots móviles. Esto ha llevado a que los RMR tengan un impacto significativo en la vida diaria de las personas \cite{ref_journal2, ref_journal3, ref_journal4}. Sin embargo, el desarrollo y la aplicación de los RMR no es una tarea trivial, ya que son sistemas mecatrónicos complejos que generalmente consisten en tres subsistemas: la estructura mecánica, los actuadores y la electrónica de potencia \cite{ref_journal5}. Por lo tanto, su aplicación requiere experiencia y sinergia entre múltiples disciplinas, como el control automático, la informática, la electrónica, entre otras. En este sentido, desde la perspectiva del control automático, los RMR deben abordar varias tareas, como el seguimiento de trayectorias \cite{ref_journal6}, el seguimiento de caminos \cite{ref_journal7}, el control de formación \cite{ref_journal8} y la evasión de obstáculos \cite{ref_journal9}.
+
+
+\section{Estado del arte}
+
+Con el propósito de destacar las contribuciones de esta tesis, se lleva a cabo una revisión de los estudios más relevantes relacionados con  dos de las tareas más representativas en robótica móvil, siendo estas las tareas de evitación de obstáculos y seguimiento de trayectorias en robots móviles con ruedas. Además, estas tareas resultan de interés ya que son las únicas en las que se han considerado todos los subsistemas del RMR para el diseño de controladores que resuelvan dichas tareas. 
+
+\subsection{Tarea de evasión de obstaculos en RMR aplicando campos potenciales artificiales}
+
+
+En esta sección se presentan los estudios más relevantes sobre la tarea de evasión de obstáculos en RMR, aplicando el algoritmo de campos potenciales artificiales y métodos de control en lazo cerrado. Se destaca que existen enfoques que consideran o no los subsistemas del RMR en el controlador encargado de realizar la tarea. Estos enfoques se clasifican de la siguiente manera: cuando se considera únicamente la estructura mecánica; cuando se consideran la estructura mecánica y los actuadores; y cuando se incluyen la estructura mecánica, los actuadores y la electrónica de potencia. 
+
+\subsubsection{1.2.1.1 Considerando unicamente la estructura mecánica}
+
+Esta sección describe trabajos que utilizan la técnica de campos potenciales artificiales y algoritmos de control automático con el objetivo de resolver la tarea de evasión de obstáculos en RMR. Los trabajos presentados consideran únicamente la estructura mecánica en el diseño de sus algoritmos de control.
+
+\begin{enumerate}
+	\item \textbf{Modelo Cinemático.} Actualmente, diversos estudios han abordado la evasión de obstáculos en Robots Móviles con Ruedas (RMR) mediante modelos cinemáticos que emplean técnicas basadas en campos potenciales artificiales. Khatib \cite{ref_journal10} introdujo la estructura matemática clásica de estos campos, permitiendo generar vectores de velocidad deseados colineales con las fuerzas repulsivas de los obstáculos. Urakubo et al. \cite{ref_journal11} desarrollaron controladores no lineales basados en la teoría de estabilidad de Lyapunov, mejorando la robustez del sistema. Kozlowski et al. \cite{ref_journal12} implementaron controladores de seguimiento de trayectorias que incorporan funciones de repulsión derivadas de campos potenciales para ajustar la trayectoria en tiempo real. Además, se han integrado técnicas de lógica difusa con campos potenciales artificiales para aumentar la adaptabilidad y manejar incertidumbres, como lo demostraron Wang et al. \cite{ref_journal13}, Melingui et al. \cite{ref_journal14} y Shangguan et al. \cite{ref_journal15}. Valbuena y Tanner \cite{ref_journal16} propusieron controles de retroalimentación invariante en el tiempo con funciones de navegación, mientras que Wang et al. \cite{ref_journal17} combinaron control predictivo con variaciones de campos potenciales para vehículos tipo Ackerman, permitiendo una planificación anticipada de movimientos y una evasión eficiente en entornos dinámicos. Estas metodologías cinemáticas representan avances significativos en la navegación autónoma de RMR, facilitando una evasión efectiva de obstáculos mediante la generación y ajuste dinámico de velocidades deseadas.
+	
+	\item \textbf{Modelo Dinámico.} Por otro lado, los modelos dinámicos han incorporado técnicas que consideran las fuerzas y torques involucrados en la dinámica del RMR. Ferrara y Rubagotti \cite{ref_journal18} presentaron un control deslizante de segundo orden que sigue el gradiente de un campo potencial armónico, facilitando la evasión de obstáculos. Kowdiki et al. \cite{ref_journal19} abordaron la tarea de evasión mediante un control de formación basado en modos deslizantes que considera la fuerza resultante de un campo potencial artificial modificado. Filomonov y Filomonov \cite{ref_journal20} diseñaron un control no lineal en el cual los torques de los actuadores dependen del vector gradiente de un campo potencial con una estructura matemática novedosa. Yang et al. \cite{ref_journal21} implementaron un observador de segundo orden junto con un control no lineal que utiliza el gradiente de un campo potencial previamente desarrollado \cite{ref_journal22}. Li et al. \cite{ref_journal23} introdujeron un control predictivo basado en modelos que sigue el gradiente de un campo potencial mejorado, validado mediante co-simulación, mientras que Ji et al. \cite{ref_journal24} describieron un control predictivo multicriterio que emplea un campo potencial virtual tridimensional, también validado mediante simulaciones. Finalmente, Abdalla et al. \cite{ref_journal25} propusieron un control difuso optimizado mediante un algoritmo de optimización por enjambre de partículas, utilizando la fuerza resultante de un campo potencial mejorado para la evasión de obstáculos. Estas metodologías dinámicas integran métodos matemáticos avanzados y algoritmos de control sofisticados, permitiendo la evasión de obstáculos.
+\end{enumerate}
+
+\subsubsection{1.2.1.2 Considerando la estructura mecánica y los actuadores}
+
+Esta sección describe trabajos que utilizan la técnica de campos potenciales artificiales y algoritmos de control automático con el objetivo de resolver la tarea de evasión de obstáculos en RMR. Además, los trabajos presentados consideran tanto la estructura mecánica como los subsistemas de actuadores en el diseño de sus algoritmos de control.
+
+\begin{enumerate}
+	\item \textbf{Modelo Cinemático.} En \cite{ref_journal26}, R. Silva-Ortigoza et al. mostraron un controlador jerárquico para un RMR de tracción diferencial y sus actuadores. El controlador propuesto en \cite{ref_journal27} se implementa para el control del subsistema de la estructura mecánica (nivel alto). Esta etapa sigue el perfil de gradiente de un campo potencial artificial clásico \cite{ref_journal11}, y emplea un control PI para el subsistema de actuadores (nivel bajo).
+	
+	\item \textbf{Modelo Dinámico.} En \cite{ref_journal28}, J. Guldner y V.I. Utkin abordaron la tarea de evasión de obstáculos proponiendo un método de control para robots móviles no holonómicos utilizando modos deslizantes. Este control sigue el gradiente de un campo potencial armónico \cite{ref_journal29} y considera los actuadores de los RMR mediante control de retroalimentación de estado.
+\end{enumerate}
+
+\subsubsection{1.2.1.3 Considerando la estructura mecánica, los actuadores y la etapa de potencia}
+
+
+Hasta ahora, en la literatura relacionada con la evasión de obstáculos en RMR al considerar la técnica de campos potenciales artificiales y el control automático, no se ha reportado la integración de los tres subsistemas que los comprenden.
+
+
+\subsection{Tarea de seguimiento de trayectoria en RMR}
+
+En esta sección se analizan los estudios más relevantes sobre el seguimiento de trayectoria en RMR, destacando los diferentes enfoques según la integración de los subsistemas en el controlador. Estos enfoques se clasifican en: considerar únicamente la estructura mecánica; incluir la estructura mecánica y los actuadores; e integrar la estructura mecánica, los actuadores y la electrónica de potencia.
+
+\subsubsection{1.2.2.1 Considerando unicamente la estructura mecánica}
+
+En la literatura sobre seguimiento de trayectoria en RMR, se han desarrollado diversas técnicas de control automático basadas en modelos cinemáticos y dinámicos, en las que solo se considera la estructura mecanica en su diseño.
+
+\textbf{Modelos Cinemáticos.} Kanayama et al. \cite{ref_journal30} presentaron un control basado en la linealización del vector de estados, demostrando su robustez ante incertidumbre paramétrica mediante simulaciones y experimentos. Samson y Ait-Abderrahim \cite{ref_journal31} introdujeron un enfoque estabilizante mediante retroalimentación del vector de estado, utilizando un móvil virtual como referencia, lo que permitió una mayor estabilidad y precisión en el seguimiento de trayectorias predefinidas. Canudas de Wit y SØrdalen \cite{ref_journal32} propusieron un control suave exponencialmente estable desde cualquier condición inicial, mostrando alta eficacia en simulaciones y garantizando una respuesta estable y rápida del sistema. Chacal y Sira-Ramírez \cite{ref_journal33} desarrollaron un control basado en modos deslizantes, demostrando su robustez ante perturbaciones mediante simulaciones, lo que resulta especialmente útil para enfrentar incertidumbres y variaciones en el entorno.
+
+\textbf{Modelos Dinámicos.} d'Andréa-Novel et al. \cite{ref_journal34} desarrollaron el modelo dinámico de un robot móvil diferencial mediante el formalismo de Euler-Lagrange y diseñaron un control basado en realimentación del vector de estado. Fierro y Lewis \cite{ref_journal35} propusieron un control basado en backstepping para resolver las tareas de seguimiento de trayectorias, seguimiento de sendas y estabilización, marcando un punto de partida significativo en el uso de backstepping para el control dinámico. Fukao et al. \cite{ref_journal36} diseñaron un control adaptativo basado en backstepping que estima los parámetros dinámicos del robot móvil, abordando así problemas de incertidumbre en los modelos. Dixon et al. \cite{ref_journal37} desarrollaron un control adaptativo de par que resolvió las tareas de seguimiento de trayectorias y estabilización, mostrando robustez frente a perturbaciones dinámicas. Chwa \cite{ref_journal38} propuso un control en cascada para modelos dinámicos, integrando backstepping y linearización por retroalimentación, lo que es notable por su capacidad para abordar de forma simultánea distintos aspectos del modelo dinámico. Caprano et al. \cite{ref_journal39} desarrollaron un controlador jerárquico que combina modos deslizantes para el modelo dinámico con un control adaptativo por redes neuronales, destacándose por su enfoque integrado. Huang et al. \cite{ref_journal40} presentaron un control basado en redes neuronales, robusto ante incertidumbres paramétricas, con aplicaciones prácticas relevantes en entornos de alta variabilidad. Finalmente, Nguyen et al. \cite{ref_journal41} desarrollaron un control deslizante basado en redes neuronales para un RMR sujeto a deslizamiento e incertidumbres en el modelo matemático, logrando robustez frente a perturbaciones externas. Estas metodologías representan avances significativos en el seguimiento de trayectoria de RMR.
+
+\subsubsection{1.2.2.2. Considerando la estructura mecánica y los actuadores}
+
+
+Los controles propuestos consideran a la estructura mecánica y los actuadores en su diseño, dividiéndose en dos enfoques principales: Modelos Cinemáticos y Modelos Dinámicos.
+
+\textbf{Modelos Cinemáticos.} Espinosa et al. \cite{ref_journal42} presentaron un control adaptable para los actuadores y un control basado en lógica difusa para seguimiento de trayectoria y evasión de obstáculos. Silva-Ortigoza et al. \cite{ref_journal43} diseñaron un controlador jerárquico de dos niveles: un control por linealización entrada-salida para la estructura mecánica y un control por planitud diferencial para los actuadores. Zuo et al. \cite{ref_journal44} propusieron un control robusto compuesto por un control cinemático y un control por redes neuronales. Kim y Kim \cite{ref_journal45} desarrollaron un control de seguimiento que contempla cambios abruptos en la trayectoria deseada. Li et al. \cite{ref_journal46} resolvieron tareas de seguimiento mediante un control híbrido inteligente y PD, y diseñaron un control pasivo en el dominio del tiempo para teleoperación háptica. Mu et al. \cite{ref_journal47} implementaron un control por modos deslizantes para la estructura mecánica junto con un control PI para los actuadores en un sistema embebido. Huynh et al. \cite{ref_journal48} reportaron estrategias de control predictivo comparadas con un control PID, y Márquez-Sánchez et al. \cite{ref_journal49} desarrollaron un controlador jerárquico de dos niveles con control cinemático y controles por PI para actuadores.
+
+\textbf{Modelos Dinámicos.} Das et al. \cite{ref_journal50} reportaron un control adaptativo basado en redes neuronales. Das y Kar \cite{ref_journal51} integraron un control cinemático con lógica difusa sintonizada en tiempo real. Hou et al. \cite{ref_journal52} diseñaron un control robusto adaptativo mediante backstepping y lógica difusa. Zohar et al. \cite{ref_journal53} desarrollaron un control basado en planitud diferencial y backstepping para lograr convergencia exponencial. Arab y Fateh \cite{ref_journal54} propusieron un control adaptativo basado en un estimador de lógica difusa. Xin et al. \cite{ref_journal55} presentaron un control continuo de tiempo con observador y compensador adaptativo. Goswami et al. \cite{ref_journal56} diseñaron un controlador jerárquico para modelos cinemático/dinámico, combinando modos deslizantes con control PID para seguimiento de velocidad. Mirzaeinejad \cite{ref_journal57} desarrolló un control basado en optimización no lineal, robusto ante perturbaciones, comparando su efectividad con un control por modos deslizantes.
+
+
+\subsubsection{1.2.2.3. Considerando la estructura mecánica, los actuadores y la etapa de potencia}
+
+Los controles jerárquicos que integran los tres subsistemas principales de un RMR diferencial (estructura mecánica, actuadores y etapa de potencia) se han desarrollado exclusivamente utilizando modelos cinemáticos. Por ejemplo, Ortigoza et al. \cite{ref_journal58} presentaron un controlador de tres niveles que emplea un control por linealización entrada-salida para la estructura mecánica, un control basado en planitud diferencial para los actuadores y un control por modos deslizantes y PI para la etapa de potencia. García-Sánchez et al. \cite{ref_journal59, ref_journal60} diseñaron controladores jerárquicos de tres niveles, donde el nivel alto utiliza un control cinemático para la estructura mecánica, el nivel medio emplea controles por planitud diferencial para los actuadores, y el nivel bajo implementa controles promedio basados en planitud diferencial y PI para la etapa de potencia. Además, en \cite{ref_journal61}, se demostró que el esquema propuesto supera en desempeño al reportado previamente.
+
+Hasta la fecha, no se han reportado estudios que integren los tres subsistemas mencionados utilizando modelos dinámicos.
+
+
+
+\section{Planteamiento y justificaci\'on del problema}
+
+
+A pesar de que el desarrollo de controladores para RMR es un tópico ampliamente estudiado, existen temáticas relacionadas con las tareas de los RMR que aún no cuentan con un amplio número de propuestas de solución, si es que alguna ha sido reportada. Se puede destacar que las soluciones al problema de evasión de obstáculos, cuando se consideran todos los subsistemas de un RMR y se utiliza el algoritmo de campos potenciales artificiales empleando el modelo cinemático, no han sido validadas experimentalmente. Por otra parte, la tarea de seguimiento de trayectoria, al considerar todos los subsistemas del RMR, tiene escasas propuestas de solución.
+
+Así, esta investigación abordará el desarrollo de controladores para las tareas de evasión de obstáculos y seguimiento de trayectoria en RMR, considerando todos sus subsistemas.
+
+
+\section{Objetivos del trabajo}
+
+
+Posterior a la revisión del estado del arte y considerando el planteamiento y justificación del problema, a continuación se presentan el objetivo general y los objetivos particulares de esta investigación.
+
+\subsection{Objetivo general}
+
+Desarrollar controladores para la tarea de seguimiento de trayectorias bidireccionales en RMR, considerando la estructura del RMR, sus actuadores y la electrónica de potencia. Para esto se diseñará un esquema de control jerárquico conmutado que permita solucionar el problema de seguimiento de trayectorias bidireccionales. Su desempeño será verificado a través de experimentos.
+
+
+\subsection{Objetivos particulares}
+
+
+Con motivo de alcanzar el objetivo general mencionado con anterioridad, se desarrollarán los siguientes objetivos particulares:
+
+\begin{enumerate} 
+	\item Revisar y mantener actualizado el estado del arte relacionado con la tarea seguimiento de trayectoria en RMR. 
+	\item Modelar y analizar los subsistemas del RMR.  
+	\item Analizar y desarrollar la generación de trayectorias para la tarea de seguimiento de trayectorias bidireccionales. 
+	\item Diseñar la propuesta de esquema de control para la tarea de seguimiento de trayectorias bidireccionales. 
+	\item Poner en marcha la experimentación del sistema en lazo cerrado de los controladores en el laboratorio de mecatrónica y energías renovables del CIDETEC-IPN. 
+	\item Validar experimentalmente el desempeño de los controladores. 
+	\item Realizar el reporte técnico relacionado con el desarrollo de esta propuesta de tesis. 
+\end{enumerate}
+	
+
+\section{Medios a emplear}
+Los medios que se emplearán para alcanzar el objetivo de esta investigación son:
+
+\begin{itemize}
+	\item Bases de datos cientícas: Web of Science, Scopus y Google académico. Su uso permitirá mantener el esatdo del arte asociado a las tematicas desarroladas en esta propuesta de tesis.
+	\item Computadora de escritorio proporcionada por el CIDETEC con las carecterísticas siguientes:
+	\begin{itemize}
+		\item Procesador: Intel Core i5 10400 de seis n\'ucleos 2.9 Ghz.
+		\item Memoria RAM: 16 GB.
+		\item Almacenamiento: 1 TB de SSD y 2 TB de HDD.
+		\item Unidad de procesamiento de gr\'aficos: NVIDIA GTX 1650.
+		\item Sistema operativo: Windows 10 Enterprise 22H2 de 64 bits.
+	\end{itemize}
+	\item Matlab-Simulink R2024b.
+	\item Entorno de desarrollo integrado TexStudio.
+	\item Conexión a internet de 100MB.
+	\item Componentes electr\'onicos pasivos.
+	\item Fuentes de alimentaci\'on de corriente directa.
+	\item Osciloscopio.
+	\item Mult\'imetro.
+	\item Tarjeta de adquisici\'on de datos DS1104.
+	\item Tarjeta de adquisici\'on de datos MicroLabBox.
+	\item Robot móbil de ruebas fabricado en el Laboratorio de Mecatrónica y Energías REnovables del CIDETEC.
+	\item Puntas de corriente Tektronix A622.
+	\item Puntas diferenciales de alta tensi\'on Tektrnix P5200A.
+\end{itemize}
+
+\section{Contenido del trabajo}
+De manera tentativa, la estructura de la tesis contará con seis capítulos. En el Capítulo 1 se realizará una revisión del estado del arte, analizando trabajos relacionados con el desarrollo de controladores para la evasión de obstáculos y el seguimiento de trayectorias en robots móviles de ruedas. El Capítulo 2 estará dedicado al modelado matemático de los sistemas que conforman el robot móvil de ruedas. En el Capítulo 3 se desarrollará el algoritmo de campos potenciales artificiales junto con la generación de trayectorias. El Capítulo 4 abordará el diseño e implementación del esquema de control para la tarea de evasión de obstáculos, incluyendo pruebas experimentales para validar su desempeño. En el Capítulo 5 se trabajará en el esquema de control para el seguimiento de trayectorias, acompañado de las respectivas pruebas experimentales para evaluar su eficacia. Finalmente, en el Capítulo 6 se analizarán los resultados obtenidos, se presentarán las conclusiones derivadas del trabajo y se identificarán áreas de oportunidad para futuras investigaciones en esta línea de estudio.
+\newpage
+
+\section{Cronograma de actividades}
+En la Fig. \ref{fig1} se presenta el cronograma de actividades relacionado con esta propuesta de trabajo de tesis, con la finalidad de dar cumplimiento a los objetivos establecidos.
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[scale=0.56]{figuras/Cronograma.pdf}
+	\caption{Cronograma de actividades.}
+	\label{fig1}
+\end{figure}
+
+\begin{thebibliography}{99}
+\addcontentsline{toc}{chapter}{Referencias}	
+	%1
+%1
+\bibitem{ref_journal1}
+R. Goel and P. Gupta, ``Robotics and industry 4.0,'' in \textit{A roadmap to industry 4.0: Smart production, sharp business and sustainable development}, A. Nayyar and A. Kumar, Cham, Switzerland: Springer, 2020, pp. 157--169.
+
+%2
+\bibitem{ref_journal2}
+R. Raj and A. Kos, ``A comprehensive study of mobile robot: History, development applications, and future research perspectives,'' \textit{Appl. Sci.}, vol. 12, no. 14, Art. no. 6951, 2022. [Online]. Available: https://doi.org/10.3390/app12146951
+
+%3
+\bibitem{ref_journal3}
+D. Milakis, B. Van-Arem, and B. Van-Wee, ``Policy and society related implications of automated driving: A review of literature and directions for future research,'' \textit{J. Intell. Transp. Syst.}, vol. 21, no. 4, pp. 324--348, 2017. [Online]. Available: https://doi.org/10.1080/15472450.2017.1291351
+
+%4
+\bibitem{ref_journal4}
+F. Duarte and C. Ratti, ``The impact of autonomous vehicles on cities: A review,'' \textit{J. Urban Technol.}, vol. 25, no. 4, pp. 3--18, 2018. [Online]. Available: https://doi.org/10.1080/10630732.2018.1493883
+
+%5
+\bibitem{ref_journal5}
+J. R. Garc\'ia-S\'anchez, R. Silva-Ortigoza, S. Tavera-Mosqueda, C. Márquez-S\'anchez, V. M. Hern\'andez-Guzm\'an, M. Antonio-Cruz, G. Silva-Ortigoza, and H. Taud, ``Tracking control for mobile robots considering the dynamics of all their subsystems: Experimental implementation,'' \textit{Complexity}, vol. 2017, Dec. 2017, Art. no. 5318504. [Online]. Available:
+https://www.hindawi.com/journals/complexity/2017/5318504/
+
+%6
+\bibitem{ref_journal6}
+P. Li, S. Wang, H. Yang, and H. Zhao, ``Trajectory tracking and obstacle avoidance for wheeled mobile robots based on EMPC with an adaptive prediction horizon,'' \textit{IEEE Trans. Cybern.}, vol. 52, no. 12, pp. 13536--13545, 2022. [Online]. Available: https://doi.org/10.1109/TCYB.2021.3125333
+
+%7
+\bibitem{ref_journal7}
+X. Yue, J. Chen, Y. Li, R. Zou, Z. Sun, X. Cao, and S. Zhang, ``Path tracking control of skid-steered mobile robot on the slope based on fuzzy system and model predictive control,'' \textit{Int. J. Control Autom. Syst.}, vol. 20, pp. 1365--1376, 2022. [Online]. Available: https://doi.org/10.1007/s12555-021-0203-0
+
+%8
+\bibitem{ref_journal8}
+Y. Wu, Z. Zuo, Q. Han, Y. Wang, and H. Yang, ``Formation control of wheeled mobile robots with multiple virtual leaders under communication failures,'' \textit{IEEE Trans. Control Syst. Technol.}, vol. 31, no. 1, pp. 295--305, 2023. [Online]. Available: https://doi.org/10.1109/TCST.2022.3175315
+
+%9
+\bibitem{ref_journal9}
+X. Li, Z. Xu, S. Li, Z. Su, and X. Zhou, ``Simultaneous obstacle avoidance and target tracking of multiple wheeled mobile robots with certified safety,'' \textit{IEEE Trans. Cybern.}, vol. 52, no. 11, pp. 11859--11873, 2022. [Online]. Available: https://doi.org/10.1109/TCYB.2021.3070385
+
+%10
+\bibitem{ref_journal10}
+O. Khatib, ``Real-time obstacle avoidance for manipulators and mobile robots,'' \textit{Int. J. Robot. Res.}, vol. 5, no. 1, pp. 90--98, 1986. [Online]. Available: https://doi.org/10.1177/027836498600500106
+
+\bibitem{ref_journal11}
+T. Urakubo, K. Okuma, and Y. Tada, 
+"Feedback control of a two wheeled mobile robot with obstacle avoidance using potential functions," 
+in Proc. 2004 IEEE/RSJ Int. Conf. Intell. Robots Syst. (IROS), 2004,
+doi: 10.1109/IROS.2004.1389772.
+
+%11
+\bibitem{ref_journal12}
+W. Kowalczyk, M. Michałek, and K. Kozłowski, ``Trajectory tracking control with obstacle avoidance capability for unicycle-like mobile robot,'' \textit{Bull. Pol. Acad. Sci. Tech. Sci.}, vol. 60, no. 3, pp. 537--546, 2012. [Online]. Available: https://doi.org/10.2478/v10175-012-0066-x
+
+%12
+\bibitem{ref_journal13}
+C. Wang, Z. Piao, L. Li, W. Sun, J. Wang, and C. Li, 
+"Path planning for mobile robot using fuzzy controllers with artificial potential field," 
+in Proc. 2019 IEEE Int. Conf. Unmanned Syst. (ICUS), 2019,
+doi: 10.1109/ICUS48101.2019.8996048.
+
+%13
+\bibitem{ref_journal14}
+A. Melingui, R. Merzouki, J.P. Mbede, and T. Chettibi, ``A novel approach to integrate artificial potential field and fuzzy logic into a common framework for robots autonomous navigation,'' \textit{Proc. Inst. Mech. Eng. I J. Syst. Control Eng.}, vol. 228, no. 10, pp. 787--801, 2014. [Online]. Available: https://doi.org/10.1177/0959651814548300
+
+%14
+\bibitem{ref_journal15}
+L. Shangguan, J.A. Thomasson, and S. Gopalswamy, ``Motion planning for autonomous grain carts,'' \textit{IEEE Trans. Veh. Technol.}, vol. 70, no. 3, pp. 2112--2123, 2021. [Online]. Available: https://doi.org/10.1109/TVT.2021.3058274
+
+%15
+\bibitem{ref_journal16}
+L. Valbuena and H.G. Tanner, ``Hybrid potential field based control of differential drive mobile robots,'' \textit{J. Intell. Robot. Syst.}, vol. 68, pp. 307--322, 2012. [Online]. Available: https://doi.org/10.1007/s10846-012-9685-6
+
+%16
+\bibitem{ref_journal17}
+J. Wang, Y. Yan, K. Zhang, Y. Chen, M. Cao, and G. Yin, ``Path planning on large curvature roads using driver-vehicle-road system based on the kinematic vehicle model,'' \textit{IEEE Trans. Veh. Technol.}, vol. 71, no. 1, pp. 311--325, 2022. [Online]. Available: https://doi.org/10.1109/TVT.2021.3130932
+
+%17
+\bibitem{ref_journal18}
+A. Ferrara and M. Rubagotti, ``Second-order sliding-mode control of a mobile robot based on a harmonic potential field,'' \textit{IET Control Theory Appl.}, vol. 2, no. 9, pp. 807--818, 2008. [Online]. Available: https://doi.org/10.1049/iet-cta:20070424
+
+%18
+\bibitem{ref_journal19}
+K.H. Kowdiki, R.K. Barai, and S. Bhattacharya, ``Autonomous leader-follower formation control of non-holonomic wheeled mobile robots by incremental path planning and sliding mode augmented tracking control,'' \textit{Int. J. Syst. Control Commun.}, vol. 10, no. 3, pp. 191--217, 2019. [Online]. Available: https://doi.org/10.1504/IJSCC.2019.100530
+.
+
+%19
+\bibitem{ref_journal20}
+A.B. Filimonov and N.B. Filimonov, ``Constructive aspects of the method of potential fields in mobile robotics,'' \textit{Optoelectron. Instrum. Data Process.}, vol. 57, pp. 371--377, 2021. [Online]. Available: https://doi.org/10.3103/S8756699021040063
+
+\bibitem{ref_journal21}
+H. Yang, X. Fan, P. Shi, and C. Hua, ``Nonlinear control for tracking and obstacle avoidance of a wheeled mobile robot with nonholonomic constraint,'' \textit{IEEE Trans. Control Syst. Technol.}, vol. 24, no. 2, pp. 741--746, 2016. [Online]. Available: https://doi.org/10.1109/TCST.2015.2457877
+
+%20
+\bibitem{ref_journal22}
+S. Wen, W. Zheng, J. Zhu, X. Li, and S. Chen, ``Elman fuzzy adaptive control for obstacle avoidance of mobile robots using hybrid force/position incorporation,'' \textit{IEEE Trans. Syst. Man Cybern. Syst.}, vol. 42, no. 4, pp. 603--608, 2022. [Online]. Available: https://doi.org/10.1109/TSMCC.2011.2157682
+
+%21
+\bibitem{ref_journal23}
+Y. Li, W. Yang, X. Zhang, X. Kang, and M. Li, ``Research on automatic driving trajectory planning and tracking control based on improvement of the artificial potential field method,'' \textit{Sustainability}, vol. 14, no. 19, Art. no. 12131, 2022. [Online]. Available: https://doi.org/10.3390/su141912131
+
+% 22
+\bibitem{ref_journal24}
+J. Ji and A. Khajepour, ``Path planning and tracking for vehicle collision avoidance based on model predictive control with multi-constraints,'' \textit{IEEE Trans. Veh. Technol.}, vol. 66, no. 2, pp. 593--615, 2022. [Online]. Available: https://doi.org/10.1109/TVT.2016.2555853
+
+%23
+\bibitem{ref_journal25}
+T.Y. Abdalla, A.A. Abed, and A.A. Ahmed, ``Mobile robot navigation using PSO-optimized fuzzy artificial potential field with fuzzy control,'' \textit{J. Intell. Fuzzy Syst.}, vol. 32, pp. 3893--3908, 2017. [Online]. Available: https://doi.org/10.3233/IFS-162205
+
+%24
+\bibitem{ref_journal26}
+R. Silva-Ortigoza, C. Márquez-Sánchez, F. Carrizosa-Corral, V.M. Hernández-Guzmán, J.R. García-Sánchez, H. Taud, M. Maciano-Melchor, and J.A. Álvarez-Cedillo, ``Obstacle avoidance task for a wheeled mobile robot - a MATLAB-Simulink-based didactic application,'' in \textit{MATLAB Applications for the Practical Engineer}, K. Bennett, Ed. London, United Kingdom: IntechOpen, 2014, pp. 79--102.
+
+%25
+\bibitem{ref_journal27}
+T.A. Vidal-Calleja, M. Velasco-Villa, and E. Aranda-Bricaire, 
+"Artificial potential fields for trailer-like systems," 
+in Proc. 10th Latin Am. Congr. Autom. Control (LACC), 2002.
+
+%26
+\bibitem{ref_journal28}
+J. Guldner and V.I. Utkin, ``Tracking the gradient of artificial potential fields: Sliding mode control for mobile robots,'' \textit{Int. J. Control}, vol. 63, no. 3, pp. 417--432, 1996. [Online]. Available: https://doi.org/10.1080/00207179608921850
+
+%27
+\bibitem{ref_journal29}
+S.S. Ge and Y.J. Cui, ``New potential functions for mobile robot path planning,'' \textit{IEEE Trans. Robot. Autom.}, vol. 16, no. 5, pp. 615--620, 2000. [Online]. Available: https://doi.org/10.1109/70.880813
+.
+
+%28
+\bibitem{ref_journal30}
+Y. Kanayama, Y. Kimura, F. Miyazaki, and T. Noguchi, 
+"A stable tracking control method for an autonomous mobile robot," 
+in Proc. 1990 IEEE Int. Conf. Robot. Autom., Cincinnati, OH, USA, vol. 1, 1990,
+pp. 384–389.
+
+%29
+\bibitem{ref_journal31}
+C. Samson and K. Ait-Abderrahim, 
+"Feedback control of a nonholonomic wheeled cart in cartesian space," 
+in Proc. 1991 IEEE Int. Conf. Robot. Autom., Sacramento, CA, USA, vol. 2, 1991,
+pp. 1136–1141.
+
+%30
+\bibitem{ref_journal32}
+C. Canudas de Wit and O.J. Sørdalen, ``Exponential stabilization of mobile robots with nonholonomic constraints,'' \textit{IEEE Trans. Autom. Control}, vol. 37, no. 11, pp. 1791--1797, 1992.
+
+%31
+\bibitem{ref_journal33}
+J.A. Chacal and H. Sira-Ramírez, 
+"On the sliding mode control of wheeled mobile robots," 
+in Proc. 1994 IEEE Int. Conf. Humans, Inf. Technol. Syst. Man Cybern., San Antonio, TX, USA, 
+Oct. 2–5, 1994, vol. 2, pp. 1938–1943.
+
+%32
+\bibitem{ref_journal34}
+B. d'Andréa-Novel, G. Bastin, and G. Campion, 
+"Modelling and control of nonholonomic wheeled mobile robots," 
+in Proc. 1991 IEEE Int. Conf. Robot. Autom., Sacramento, CA, USA, vol. 2, 1991,
+pp. 1130–1135.
+
+\bibitem{ref_journal35}
+R. Fierro and F.L. Lewis, 
+"Control of a nonholonomic mobile robot: Backstepping kinematics into dynamics," 
+in Proc. 34th IEEE Conf. Decis. Control, New Orleans, LA, USA, vol. 4, 1995,
+pp. 3805–3810.
+
+%34
+\bibitem{ref_journal36}
+T. Fukao, H. Nakagawa, and N. Adachi, ``Adaptive tracking control of a nonholonomic mobile robot,'' \textit{IEEE Trans. Robot. Autom.}, vol. 16, no. 5, pp. 609--615, 2000.
+
+%35
+\bibitem{ref_journal37}
+W.E. Dixon, M.S. de Queiroz, D.M. Dawson, and T.J. Flynn, ``Adaptive tracking and regulation of a wheeled mobile robot with controller/update law modularity,'' \textit{IEEE Trans. Control Syst. Technol.}, vol. 12, no. 1, pp. 138--147, 2004.
+
+%36
+\bibitem{ref_journal38}
+D. Chwa, ``Tracking control of differential-drive wheeled mobile robots using a backstepping-like feedback linearization,'' \textit{IEEE Trans. Syst. Man Cybern. A Syst. Humans}, vol. 40, no. 6, pp. 1285--1295, 2010.
+
+%37
+\bibitem{ref_journal39}
+F. Capraro, F.G. Rossomando, C. Soria, and G. Scaglia, ``Cascade sliding control for trajectory tracking of a nonholonomic mobile robot with adaptive neural compensator,'' \textit{Math. Probl. Eng.}, vol. 2017, pp. 1--13, 2017.
+
+%38
+\bibitem{ref_journal40}
+H. Huang, J. Zhou, Q. Di, J. Zhou, and J. Li, ``Robust neural network-based tracking control and stabilization of a wheeled mobile robot with input saturation,'' \textit{Int. J. Robust Nonlinear Control}, vol. 29, no. 2, pp. 375--392, 2019.
+
+%39
+\bibitem{ref_journal41}
+T. Nguyen, K. Nguyentien, T. Do, and T. Pham, ``Neural network-based adaptive sliding mode control method for tracking of a nonholonomic wheeled mobile robot with unknown wheel slips, model uncertainties, and unknown bounded external disturbances,'' \textit{Acta Polytech. Hung.}, vol. 15, no. 2, pp. 103--123, 2018.
+
+%40
+\bibitem{ref_journal42}
+F. Espinosa, E. López, R. Mateos, M. Mazo, and R. García, ``Advanced and intelligent control techniques applied to the drive control and path tracking systems on a robotic wheelchair,'' \textit{Auton. Robots}, vol. 11, no. 2, pp. 137--148, 2001.
+
+%41
+\bibitem{ref_journal43}
+R. Silva-Ortigoza, G. Silva-Ortigoza, V.M. Hernandez-Guzman, V.R. Barrientos-Sotelo, J.M. Albarran-Jimenez, and V.M. Silva-Garcia, ``Trajectory tracking in a mobile robot without using velocity measurements for control of wheels,'' \textit{IEEE Latin Am. Trans.}, vol. 6, no. 7, pp. 598--607, 2008.
+
+\bibitem{ref_journal44}
+Y. Zuo, Y. Wang, X. Liu, S.X. Yang, L. Huang, X. Wu, and Z. Wang, ``Neural network robust control for a nonholonomic mobile robot including actuator dynamics,'' \textit{Int. J. Innov. Comput. Inf. Control}, vol. 6, no. 8, pp. 3437--3449, 2010.
+
+%43
+\bibitem{ref_journal45}
+Y. Kim and B.K. Kim, ``Efficient time-optimal two-corner trajectory planning algorithm for differential-driven wheeled mobile robots with bounded motor control inputs,'' \textit{Robot. Auton. Syst.}, vol. 64, pp. 35--43, 2015.
+
+\bibitem{ref_journal46}
+I.H. Li, Y.H. Chien, W.Y. Wang, and Y.F. Kao, ``Hybrid intelligent algorithm for indoor path planning and trajectory-tracking control of wheeled mobile robot,'' \textit{Int. J. Fuzzy Syst.}, vol. 18, no. 4, pp. 595--608, 2016.
+
+%45
+\bibitem{ref_journal47}
+J. Mu, X.G. Yan, S.K. Spurgeon, and Z. Mao, ``Nonlinear sliding mode control of a two-wheeled mobile robot system,'' \textit{Int. J. Model. Identif. Control}, vol. 27, no. 2, pp. 75--83, 2017.
+
+\bibitem{ref_journal48}
+H.N. Huynh, O. Verlinden, and A.V. Wouwer, ``Comparative application of model predictive control strategies to a wheeled mobile robot,'' \textit{J. Intell. Robot. Syst.}, vol. 87, no. 1, pp. 81--95, 2017.
+
+\bibitem{ref_journal49}
+C.M. Sánchez, R.S. Ortigoza, J.R.G. Sánchez, V.M.H. Guzmán, M.A. Cruz, M.M. Aranda, and G.S. Ortigoza, ``An embedded hardware for implementation of a tracking control in WMRs,'' \textit{IEEE Latin Am. Trans.}, vol. 16, no. 7, pp. 1835--1842, 2018.
+
+\bibitem{ref_journal50}
+T. Das, I.N. Kar, and S. Chaudhury, ``Simple neuron-based adaptive controller for a nonholonomic mobile robot including actuator dynamics,'' \textit{Neurocomputing}, vol. 69, no. 2006, pp. 2140--2151, 2006.
+
+\bibitem{ref_journal51}
+T. Das and I.N. Kar, ``Design and implementation of an adaptive fuzzy logic-based controller for wheeled mobile robots,'' \textit{IEEE Trans. Control Syst. Technol.}, vol. 14, no. 3, pp. 501--510, 2006.
+
+\bibitem{ref_journal52}
+Z.G. Hou, A.M. Zou, L. Cheng, and M. Tan, ``Adaptive control of an electrically driven nonholonomic mobile robot via backstepping and fuzzy approach,'' \textit{IEEE Trans. Control Syst. Technol.}, vol. 17, no. 4, pp. 803--815, 2009.
+
+\bibitem{ref_journal53}
+I. Zohar, A. Ailon, and R. Rabinovici, ``Mobile robot characterized by dynamic and kinematic equations and actuator dynamics: Trajectory tracking and related application,'' \textit{Robot. Auton. Syst.}, vol. 59, no. 6, pp. 343--353, 2011.
+
+\bibitem{ref_journal54}
+A. Arab and M.M. Fateh, ``An uncertainty compensator for robust control of wheeled mobile robots,'' \textit{Adv. Robot.}, vol. 29, no. 20, pp. 1303--1313, 2015.
+
+%49
+\bibitem{ref_journal55}
+L.J. Xin, Q.L. Wang, J.H. She, and Y. Li, ``Robust adaptive tracking control of wheeled mobile robot,'' \textit{Robot. Auton. Syst.}, vol. 78, pp. 36--38, 2016.
+
+\bibitem{ref_journal56}
+N.K. Goswami and P.K. Padhy, ``Sliding mode controller design for trajectory tracking of a non-holonomic mobile robot with disturbance,'' \textit{Comput. Electr. Eng.}, vol. 75, pp. 307--323, 2018.
+
+\bibitem{ref_journal57}
+H. Mirzaeinejad, ``Optimization-based nonlinear control laws with increased robustness for trajectory tracking of non-holonomic wheeled mobile robots,'' \textit{Transp. Res. Part C Emerg. Technol.}, vol. 101, no. 2019, pp. 1--17, 2019.
+
+\bibitem{ref_journal58}
+R.S. Ortigoza, J.R.G. Sánchez, V.M.H. Guzmán, C.M. Sánchez, and M.M. Aranda, ``Trajectory tracking control for a differential drive wheeled mobile robot considering the dynamics related to the actuators and power stage,'' \textit{IEEE Latin Am. Trans.}, vol. 14, no. 2, pp. 657--664, 2016.
+
+\bibitem{ref_journal59}
+J.R.G. Sánchez, S.T. Mosqueda, R.S. Ortigoza, M.A. Cruz, G.S. Ortigoza, and J. de J. Rubio, ``Assessment of an average tracking controller that considers all the subsystems involved in a WMR: Implementation via PWM or sigma-delta modulation,'' \textit{IEEE Latin Am. Trans.}, vol. 14, no. 3, pp. 1093--1102, 2016.
+
+\bibitem{ref_journal60}
+J.R. García-Sanchez, R. Silva-Ortigoza, S. Tavera-Mosqueda, C. Márquez-Sánchez, V.M. Hernández-Guzmán, M. Antonio-Cruz, G. Silva-Ortigoza, and H. Taud, ``Tracking control for mobile robots considering the dynamics of all their subsystems: Experimental implementation,'' \textit{Complexity}, vol. 2017, pp. 1--18, 2017.
+
+\bibitem{ref_journal61}
+J.R. García-Sanchez, S. Tavera-Mosqueda, R. Silva-Ortigoza, V.M. Hernández-Guzmán, J. Sandoval-Gutiérrez, M. Marcelino-Aranda, H. Taud, and M. Marciano-Melchor, ``Robust switched tracking control for wheeled mobile robots considering the actuators and drivers,'' \textit{Sensors}, vol. 18, no. 12, pp. 1--21, 2018.
+
+\end{thebibliography}
+
+\end{document}
