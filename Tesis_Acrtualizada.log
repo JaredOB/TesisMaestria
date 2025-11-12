@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  10 NOV 2025 08:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  11 NOV 2025 22:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1005,7 +1005,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <figuras/Cronograma.pdf, id=62, 794.97pt x 621.32112pt>
 File: figuras/Cronograma.pdf Graphic file (type pdf)
 <use figuras/Cronograma.pdf>
-Package pdftex.def Info: figuras/Cronograma.pdf  used on input line 302.
+Package pdftex.def Info: figuras/Cronograma.pdf  used on input line 303.
 (pdftex.def)             Requested size: 445.18016pt x 347.93745pt.
 
 
@@ -1017,31 +1017,31 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [11 <./figuras/Cronograma.pdf>]
-Underfull \hbox (badness 1442) in paragraph at lines 328--330
+Underfull \hbox (badness 1442) in paragraph at lines 329--331
 []\OT1/cmr/m/n/12 J. R. Garc^^S^^Pa-S^^Sanchez, R. Silva-Ortigoza, S. Tavera-Mo
 squeda, C. M^^Sarquez-
  []
 
 
-Underfull \hbox (badness 3724) in paragraph at lines 328--330
+Underfull \hbox (badness 3724) in paragraph at lines 329--331
 \OT1/cmr/m/n/12 S^^Sanchez, V. M. Hern^^Sandez-Guzm^^San, M. Antonio-Cruz, G. S
 ilva-Ortigoza,
  []
 
 
-Underfull \hbox (badness 4001) in paragraph at lines 328--330
+Underfull \hbox (badness 4001) in paragraph at lines 329--331
 \OT1/cmr/m/n/12 and H. Taud, ``Trac-king con-trol for mo-bi-le ro-bots con-si-d
 e-ring the dy-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--330
+Underfull \hbox (badness 10000) in paragraph at lines 329--331
 \OT1/cmr/m/n/12 na-mics of all their subsys-tems: Ex-pe-ri-men-tal im-ple-men-t
 a-tion,'' \OT1/cmr/m/it/12 Com-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--330
+Underfull \hbox (badness 10000) in paragraph at lines 329--331
 \OT1/cmr/m/it/12 ple-xity\OT1/cmr/m/n/12 , vol. 2017, Dec. 2017, Art. no. 53185
 04. [On-li-ne]. Avai-la-ble:
  []
@@ -1051,31 +1051,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 328--330
 [12
 
 ]
-Underfull \hbox (badness 1325) in paragraph at lines 349--350
+Underfull \hbox (badness 1325) in paragraph at lines 350--351
 []\OT1/cmr/m/n/12 O. Kha-tib, ``Real-time obs-ta-cle avoi-dan-ce for ma-ni-pu-l
 a-tors and mo-bi-le ro-
  []
 
 
-Underfull \hbox (badness 2088) in paragraph at lines 370--371
+Underfull \hbox (badness 2088) in paragraph at lines 371--372
 \OT1/cmr/m/n/12 to in-te-gra-te ar-ti-fi-cial po-ten-tial field and fuzzy lo-gi
 c in-to a com-mon fra-
  []
 
 
-Underfull \hbox (badness 2376) in paragraph at lines 370--371
+Underfull \hbox (badness 2376) in paragraph at lines 371--372
 \OT1/cmr/m/n/12 me-work for ro-bots au-to-no-mous na-vi-ga-tion,'' \OT1/cmr/m/i
 t/12 Proc. Inst. Mech. Eng. I J.
  []
 
 
-Underfull \hbox (badness 2150) in paragraph at lines 390--392
+Underfull \hbox (badness 2150) in paragraph at lines 391--393
 \OT1/cmr/m/n/12 for-ma-tion con-trol of non-holonomic whee-led mo-bi-le ro-bots
  by in-cre-men-tal
  []
 
 
-Underfull \hbox (badness 1983) in paragraph at lines 390--392
+Underfull \hbox (badness 1983) in paragraph at lines 391--393
 \OT1/cmr/m/it/12 Con-trol Com-mun.\OT1/cmr/m/n/12 , vol. 10, no. 3, pp. 191--21
 7, 2019. [On-li-ne]. Avai-la-ble:
  []
@@ -1090,13 +1090,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [13]
-Underfull \hbox (badness 1082) in paragraph at lines 410--411
+Underfull \hbox (badness 1082) in paragraph at lines 411--412
 []\OT1/cmr/m/n/12 J. Ji and A. Kha-je-pour, ``Path plan-ning and trac-king for 
 vehi-cle co-lli-sion
  []
 
 
-Underfull \hbox (badness 1342) in paragraph at lines 410--411
+Underfull \hbox (badness 1342) in paragraph at lines 411--412
 \OT1/cmr/m/n/12 avoi-dan-ce ba-sed on mo-del pre-dic-ti-ve con-trol with multi-
 constraints,'' \OT1/cmr/m/it/12 IEEE
  []
@@ -1153,13 +1153,13 @@ Here is how much of TeX's memory you used:
  39741 multiletter control sequences out of 15000+600000
  567594 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,12n,91p,2003b,435s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 87i,13n,91p,2003b,435s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
 ></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
 /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></
 usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Tesis_Acrtualizada.pdf (17 pages, 294072 bytes).
+Output written on Tesis_Acrtualizada.pdf (17 pages, 294187 bytes).
 PDF statistics:
  116 PDF objects out of 1000 (max. 8388607)
  80 compressed objects within 1 object stream
