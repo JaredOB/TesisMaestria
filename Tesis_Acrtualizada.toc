@@ -1,13 +1,13 @@
 \babel@toc {spanish}{}\relax 
 \contentsline {chapter}{\numberline {1}Introducción}{3}{}%
 \contentsline {section}{\numberline {1.1}Estado del arte}{3}{}%
-\contentsline {subsection}{\numberline {1.1.1}Tarea de evasión de obstaculos en RMR aplicando campos potenciales artificiales}{3}{}%
+\contentsline {subsection}{\numberline {1.1.1}Tarea de evasión de obstaculos en RMR aplicando campos potenciales artificiales}{4}{}%
 \contentsline {subsubsection}{1.2.1.1 Considerando unicamente la estructura mecánica}{4}{}%
 \contentsline {subsubsection}{1.2.1.2 Considerando la estructura mecánica y los actuadores}{5}{}%
 \contentsline {subsubsection}{1.2.1.3 Considerando la estructura mecánica, los actuadores y la etapa de potencia}{5}{}%
 \contentsline {subsection}{\numberline {1.1.2}Tarea de seguimiento de trayectoria en RMR}{5}{}%
 \contentsline {subsubsection}{1.2.2.1 Considerando unicamente la estructura mecánica}{6}{}%
-\contentsline {subsubsection}{1.2.2.2. Considerando la estructura mecánica y los actuadores}{6}{}%
+\contentsline {subsubsection}{1.2.2.2. Considerando la estructura mecánica y los actuadores}{7}{}%
 \contentsline {subsubsection}{1.2.2.3. Considerando la estructura mecánica, los actuadores y la etapa de potencia}{7}{}%
 \contentsline {section}{\numberline {1.2}Planteamiento y justificaci\'on del problema}{8}{}%
 \contentsline {section}{\numberline {1.3}Objetivos del trabajo}{8}{}%
