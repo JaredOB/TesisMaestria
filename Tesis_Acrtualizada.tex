@@ -245,24 +245,24 @@ A continuacion son presentados el objetivo general y objetivos particulares para
 
 \subsection{Objetivo general}
 
-Desarrollar controladores para la tarea de seguimiento de trayectorias bidireccionales en RMR, considerando la estructura del RMR, sus actuadores y la electrónica de potencia. Para esto se diseñará un esquema de control jerárquico conmutado que permita solucionar el problema de seguimiento de trayectorias bidireccionales. Su desempeño será verificado a través de experimentos.
 
-Diseñar e implementar controladores para convertidores de potencia 
+
+Desrrollar y evaluar esquemas de control basados en control promedio, modo deslizante de primer orden y modo deslizante de orden superior para convertidores de potencia CD-CD Boost, Buck y Buck-Boost, para la regulacion de voltage o seguimiento de corriente, verificado mediante simulacion y experimentación.
 
 
 \subsection{Objetivos particulares}
 
 
-Con motivo de alcanzar el objetivo general mencionado con anterioridad, se desarrollarán los siguientes objetivos particulares:
+Los objetivos particulares que permitiran alcanzar el objetivo general son los siguientes:
 
 \begin{enumerate} 
-	\item Revisar y mantener actualizado el estado del arte relacionado con la tarea seguimiento de trayectoria en RMR. 
-	\item Modelar y analizar los subsistemas del RMR.  
-	\item Analizar y desarrollar la generación de trayectorias para la tarea de seguimiento de trayectorias bidireccionales. 
-	\item Diseñar la propuesta de esquema de control para la tarea de seguimiento de trayectorias bidireccionales. 
-	\item Poner en marcha la experimentación del sistema en lazo cerrado de los controladores en el laboratorio de mecatrónica y energías renovables del CIDETEC-IPN. 
-	\item Validar experimentalmente el desempeño de los controladores. 
-	\item Realizar el reporte técnico relacionado con el desarrollo de esta propuesta de tesis. 
+	\item Obtener el modelo conmutado y promedio para los convertidores CD-CD Buck, Boost, y Buck-Boost.
+	\item Desarrollar esquemas de control promedio, modo deslizante de primer orden, modo deslizante de orden superior para los convertidores CD-CD Buck, Boost, Buck-Boost.
+	\item Simular los esquemas de control desarrollado haciendo uso del toolbos Simscape de Matlab-Simulink.
+	\item Realizar experimentos con los convertidores Buck, Boost y Buck-Boost, impelmentando esquemas de control por modos deslizantes de primer orden y orden superior.
+	\item Validar la respuesta de los  esquemas de control desarrollados.
+	\item Documentar los resultados obtenidos durante el desarrollo de esta tesis.
+	
 \end{enumerate}
 	
 
@@ -279,16 +279,14 @@ Los medios que se emplearán para alcanzar el objetivo de esta investigación so
 		\item Unidad de procesamiento de gr\'aficos: NVIDIA GTX 1650.
 		\item Sistema operativo: Windows 10 Enterprise 22H2 de 64 bits.
 	\end{itemize}
-	\item Matlab-Simulink R2024b.
+	\item Matlab-Simulink R2025b
+	\item Matlab-Silmulink-Simscape Electrical 2025b..
 	\item Entorno de desarrollo integrado TexStudio.
-	\item Conexión a internet de 100MB.
-	\item Componentes electr\'onicos pasivos.
+	\item Conexión a internet.
+	\item Componentes electronicos pasivos.
 	\item Fuentes de alimentaci\'on de corriente directa.
-	\item Osciloscopio.
-	\item Mult\'imetro.
 	\item Tarjeta de adquisici\'on de datos DS1104.
 	\item Tarjeta de adquisici\'on de datos MicroLabBox.
-	\item Robot móbil de ruebas fabricado en el Laboratorio de Mecatrónica y Energías REnovables del CIDETEC.
 	\item Puntas de corriente Tektronix A622.
 	\item Puntas diferenciales de alta tensi\'on Tektrnix P5200A.
 \end{itemize}
