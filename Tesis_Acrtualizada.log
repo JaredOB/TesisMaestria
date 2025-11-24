@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  23 NOV 2025 21:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  23 NOV 2025 22:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -998,11 +998,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [9]
-<figuras/Cronograma.pdf, id=58, 794.97pt x 621.32112pt>
+<figuras/Cronograma.pdf, id=58, 597.23125pt x 421.575pt>
 File: figuras/Cronograma.pdf Graphic file (type pdf)
 <use figuras/Cronograma.pdf>
 Package pdftex.def Info: figuras/Cronograma.pdf  used on input line 295.
-(pdftex.def)             Requested size: 445.18016pt x 347.93745pt.
+(pdftex.def)             Requested size: 447.92233pt x 316.18047pt.
 
 
 
@@ -1177,10 +1177,10 @@ Here is how much of TeX's memory you used:
 ></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
 /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></
 usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Tesis_Acrtualizada.pdf (16 pages, 288208 bytes).
+Output written on Tesis_Acrtualizada.pdf (16 pages, 183007 bytes).
 PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
- 78 compressed objects within 1 object stream
+ 122 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
