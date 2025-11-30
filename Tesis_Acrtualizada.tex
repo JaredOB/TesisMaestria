@@ -161,7 +161,13 @@
 
 \chapter{Introducción}
 
-Los convertidores electronicos de potencia son elementos presentes en diversos sistemas que requieren la transformación de energia electrica. Estas aplicaciones incluyen, entre otras, energias renovables, aeronautica, vehiculos electricos, robots y telecomunicaciones \cite{ref_journal1}. Estas aplicaciones requieren convertidores CD-CD capaces de mantener un voltage de salida en un nivel deseado en un amplio rango de operacion, aun en presencia de perturbaciones de carga, cambios en la fuente de entrada e incertidumbre de parametros \cite{ref_journal2}, por lo cual resulta fundamental el desarrollo de tecnicas de control que permitan satisfacer las necesidades energeticas de estos distintos tipos de aplicaciónes. Para estas
+Los convertidores electrónicos de potencia son elementos presentes en diversos sistemas que requieren la transformación de energía eléctrica. Estas aplicaciones incluyen, entre otras, energías renovables, aeronáutica, vehículos eléctricos, robots y telecomunicaciones \cite{ref_journal1}. Estas aplicaciones requieren convertidores CD–CD capaces de mantener un voltaje de salida en un nivel deseado en un amplio rango de operación, aun en presencia de perturbaciones de carga, cambios en la fuente de entrada e incertidumbre de parámetros \cite{ref_journal2}, por lo cual resulta fundamental el desarrollo de técnicas de control que permitan satisfacer las necesidades energéticas de estos distintos tipos de aplicaciones.
+
+Para estas aplicaciones, las topologías Buck, Boost y Buck–Boost representan bloques fundamentales debido a su capacidad para proporcionar niveles de voltaje menores, mayores o invertidos con respecto al voltaje de entrada. Sin embargo, la naturaleza conmutada de estos convertidores introduce dinámicas no lineales y sensibilidad ante perturbaciones, lo que dificulta garantizar una regulación precisa bajo condiciones de operación variadas.
+
+En este contexto, el empleo de estrategias de control avanzadas se vuelve necesario para mejorar el desempeño dinámico, la robustez y la confiabilidad de estos sistemas. La presente tesis aborda el análisis, diseño y evaluación de técnicas de control aplicadas a estas topologías, con el fin de contribuir a su operación eficiente en escenarios reales.
+
+
 
 \section{Estado del arte}
 
@@ -231,14 +237,14 @@ Hasta la fecha, no se han reportado estudios que integren los tres subsistemas m
 \section{Planteamiento y justificaci\'on del problema}
 
 
-A pesar de que el desarrollo de controladores para RMR es un tópico ampliamente estudiado, existen temáticas relacionadas con las tareas de los RMR que aún no cuentan con un amplio número de propuestas de solución, si es que alguna ha sido reportada. Se puede destacar que las soluciones al problema de evasión de obstáculos, cuando se consideran todos los subsistemas de un RMR y se utiliza el algoritmo de campos potenciales artificiales empleando el modelo cinemático, no han sido validadas experimentalmente. Por otra parte, la tarea de seguimiento de trayectoria, al considerar todos los subsistemas del RMR, tiene escasas propuestas de solución.
 
-Así, esta investigación abordará el desarrollo de controladores para las tareas de evasión de obstáculos y seguimiento de trayectoria en RMR, considerando todos sus subsistemas.
+Los convertidores de potencia CD–CD se encuentran presentes en una amplia gama de aplicaciones tecnológicas, tales como sistemas automotrices, aeronáuticos, embebidos, energéticos y microrredes. A pesar de su uso extendido y su importancia en la conversión eficiente de energía eléctrica, estos sistemas presentan no linealidades inherentes, así como alta sensibilidad ante perturbaciones en el voltaje de entrada y variaciones en la carga.
 
-El desarrollo de controladores para convertidores de potencia CD-CD es un area de estudio para el cual pueden desarrollarse contribuciones, 
-\newline
+Los controladores diseñados mediante enfoques clásicos, particularmente aquellos basados en la linealización del modelo, pueden lograr una regulación aceptable bajo condiciones nominales. Sin embargo, su desempeño se ve comprometido cuando el convertidor opera ante perturbaciones significativas, cambios abruptos en la carga o exigencias dinámicas más estrictas. Esta limitación resulta especialmente crítica en aplicaciones donde se requiere robustez, alta estabilidad, rápida respuesta dinámica y seguimiento preciso de las variables de salida, como sucede en la alimentación de baterías, cargas electrónicas sensibles o cargas de potencia constante (CPL).
 
-Los convertidores CD-CD Buck, Boost, y Buck-boost son elementos fundamentales en una serie de aplicaciones: aeronauticas, automotrices, energias renovables, vehiculos electricos, etc. Sim embargo estos componentes presentan una alta no linealidad, son sensibles a perturbaciones en la carga, sensibilidad ante cambios en la fuente de alimentación y ante incertidumbre en componentes. Actualmente la implementación de esquemas de control clasico ayuda con la tarea de regulación de voltaje, pero no garantiza que el sistema se vuelta robusto ante cambios inesperados.
+Debido a estas limitaciones, el estudio y desarrollo de esquemas de control no lineal para convertidores CD–CD resulta crucial. Estrategias como las basadas en control promedio, el control por modos deslizantes de primer orden (FOSM) y el control por modos deslizantes de orden superior (HOSM) ofrecen propiedades atractivas como robustez frente a incertidumbres, insensibilidad ante perturbaciones acotadas y regulación más precisa, lo que permite ampliar el rango operativo de los convertidores y garantizar un desempeño más confiable.
+
+Las topologías buck, boost y buck-boost destacan por su amplia adopción en la industria, debido a que permiten generar un voltaje de salida menor, mayor o invertido respecto al voltaje de entrada. Cada una presenta desafíos propios asociados a su naturaleza no lineal y a las variaciones de carga. Por ello, el diseño, análisis y comparación de técnicas avanzadas de control aplicadas a estas tres topologías resultan esenciales para mejorar su desempeño, garantizar la estabilidad en múltiples condiciones de operación y facilitar su integración en aplicaciones modernas que demandan alta eficiencia energética, robustez y confiabilidad.
 
 \section{Objetivos del trabajo}
 
@@ -247,42 +253,53 @@ A continuacion son presentados el objetivo general y objetivos particulares para
 
 \subsection{Objetivo general}
 
-
-
-Desrrollar y evaluar esquemas de control basados en control promedio, modo deslizante de primer orden y modo deslizante de orden superior para convertidores de potencia CD-CD Boost, Buck y Buck-Boost, para la regulacion de voltage o seguimiento de corriente, verificado mediante simulacion y experimentación.
-
+Desarrollar y evaluar esquemas de control basados en control promedio, modos deslizantes de primer orden (FOSM) y modos deslizantes de orden superior (HOSM) para los convertidores de potencia CD–CD Buck, Boost y Buck–Boost, orientados al seguimiento de una trayectoria de voltaje, verificados mediante simulación y experimentación.
 
 \subsection{Objetivos particulares}
 
+Los objetivos particulares que permitirán alcanzar el objetivo general son los siguientes:
 
-Los objetivos particulares que permitiran alcanzar el objetivo general son los siguientes:
-
-\begin{enumerate} 
-	\item Obtener el modelo conmutado y promedio para los convertidores CD-CD Buck, Boost, y Buck-Boost.
-	\item Desarrollar esquemas de control promedio, modo deslizante de primer orden y modo deslizante de orden superior para los convertidores CD-CD Buck, Boost, Buck-Boost.
-	\item Simular los esquemas de control desarrollados para los convertidores CD-CD Buck, Boost, Buck-Boost haciendo uso del toolboox Simscape de Matlab-Simulink.
-	\item Realizar experimentos con los convertidores Buck, Boost y Buck-Boost, impelmentando esquemas de control por modos deslizantes de primer orden y orden superior.
-	\item Validar la respuesta obtenida con cada esquema de control desarrollado.
+\begin{enumerate}
+	\item Obtener los modelos conmutados y promediados de los convertidores CD–CD Buck, Boost y Buck–Boost.
+	
+	\item Diseñar esquemas de control basados en control promedio, modos deslizantes de primer orden (FOSM) y modos deslizantes de orden superior (HOSM) para las tres topologías mencionadas.
+	
+	\item Implementar y simular los esquemas de control desarrollados utilizando el entorno MATLAB/Simulink y el toolbox Simscape Electrical.
+	
+	\item Realizar experimentos con los convertidores Buck, Boost y Buck–Boost, implementando los esquemas de control por modos deslizantes de primer orden y de orden superior.
+	
+	\item Validar el desempeño dinámico y la robustez de cada esquema de control mediante la comparación entre resultados simulados y experimentales.
+	
 	\item Documentar los resultados obtenidos durante el desarrollo de esta tesis.
-	
 \end{enumerate}
-	
 
 \section{Medios a emplear}
 Los medios que se emplearán para alcanzar el objetivo de esta investigación son:
 
 \begin{itemize}
-	\item Bases de datos cientícas: Web of Science, Scopus y Google académico. Su uso permitirá mantener el esatdo del arte asociado a las tematicas desarroladas en esta propuesta de tesis.
-	\item Computadora de escritorio para desarrollo experimental entre la tarjeta de adquisición de datos y Matlab-Simulink.
-	\item Matlab-Silmulink-Simscape Electrical 2025b..
-	\item Entorno de desarrollo integrado TeXStudio.
-	\item Conexión a internet.
-	\item Componentes electronicos pasivos.
-	\item Fuentes de alimentaci\'on de corriente directa.
-	\item Tarjeta de adquisici\'on de datos DS1104.
-	\item Tarjeta de adquisici\'on de datos MicroLabBox.
-	\item Puntas de corriente Tektronix A622.
-	\item Puntas diferenciales de alta tensi\'on Tektrnix P5200A.
+	\item Bases de datos científicas: Web of Science, Scopus y Google Académico, para la revisión y actualización del estado del arte relacionado con los temas desarrollados en esta tesis.
+
+\item Computadora de escritorio para la implementación del entorno de simulación y la interfaz con las tarjetas de adquisición de datos.
+
+\item MATLAB–Simulink–Simscape Electrical 2025b para la modelación, simulación y evaluación de los esquemas de control.
+
+\item Entorno de desarrollo integrado TeXStudio para la edición del documento en \LaTeX.
+
+\item Conexión a internet para acceso a repositorios, bibliografía y herramientas de desarrollo.
+
+\item Software para control de versiones: Git y GitHub.
+
+\item Componentes electrónicos pasivos (resistencias, inductores, capacitores, entre otros) para el armado y caracterización de los convertidores.
+
+\item Fuentes de alimentación de corriente directa programables.
+
+\item Tarjeta de adquisición de datos dSPACE DS1104.
+
+\item Tarjeta de adquisición de datos dSPACE MicroLabBox.
+
+\item Puntas de corriente Tektronix A622.
+
+\item Puntas diferenciales de alta tensión Tektronix P5200A.
 \end{itemize}
 
 \section{Contenido del trabajo}
