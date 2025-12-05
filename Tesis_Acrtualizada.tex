@@ -168,23 +168,62 @@ Para estas aplicaciones, las topologías Buck, Boost y Buck–Boost representan 
 En este contexto, el empleo de estrategias de control avanzadas se vuelve necesario para mejorar el desempeño dinámico, la robustez y la confiabilidad de estos sistemas. La presente tesis aborda el análisis, diseño y evaluación de técnicas de control aplicadas a estas topologías, con el fin de contribuir a su operación eficiente en escenarios reales.
 
 
-
 \section{Estado del arte}
 
-
-En esta sección se presentan los estudios más relevantes relacionadas a la implementación de controladores promedio, por modos dslizantes de primer orden y orden superior.
+En esta sección se presentan los estudios más relevantes relacionados con la implementación de controladores promedio, control por modos deslizantes de primer orden y controladores por modos deslizantes de orden superior aplicados a convertidores DC–DC.
 
 \subsection{Técnicas basadas en control promedio}
 
-A continuación se presentan los desarrollos en la implementación y diseño de controladores basados en el modelo promedio  de los convertidores CD-CD  Buck, Boost y  Buck-Boost. DIchas tecnicas se basan en el uso del modelo promedio de los convertidores mencionados y generar una señal de control $u_av  \in [0,1],$. Existe una variedad de tecnicas que hacen uso de esta señal caracteristica del modelo promedio como lo son las basadas en pasividad, planitud diferencial, Backstepping, entre otras.
+Las técnicas basadas en el modelo promedio constituyen uno de los enfoques más utilizados para el diseño de control en convertidores DC–DC Buck, Boost y Buck–Boost. Dicho enfoque permite generar una señal de control continua \(u_{av} \in [0,1]\) a partir de la dinámica promediada, lo cual facilita la síntesis de esquemas de control lineales y no lineales. Entre las estrategias más comunes se encuentran las basadas en pasividad, planitud diferencial y técnicas tipo backstepping.
 
-Haciendo mencion del control por planitud diferencial, Leopoldo Gil-Antonio  \cite{ref_journal3}
+El modelo promediado en espacio de estados elimina la naturaleza conmutada del sistema, permitiendo su tratamiento mediante herramientas convencionales de control. Para el convertidor Buck, múltiples trabajos han empleado esquemas basados en realimentación de estado, linealización y control robusto para garantizar regulación precisa ante variaciones abruptas de carga. Rao et al.~\cite{ea_1} desarrollaron un controlador digital en modo corriente promedio (CMC) modelado mediante un esquema discreto unidimensional que permite analizar la estabilidad de escala rápida y determinar el rango estable de la ganancia proporcional del lazo de corriente en función del voltaje de entrada.
 
-\subsection{Modo deslizante de primer orden} 
+Restrepo et al.~\cite{ea_2} propusieron dos estrategias digitales para el control promedio de corriente en la topología Buck–Boost no inversora: el Predictive Average Current Control (PACC) y el Multisampled Average Current Control (MACC), las cuales permiten transiciones suaves entre modos Buck y Boost manteniendo estabilidad y regulación precisa.
 
-\subsection{Modo deslizante de orden superior}
+Weber et al.~\cite{ea_7} presentaron en 2004 una de las primeras implementaciones de control basado en planitud diferencial aplicado a un convertidor Boost, demostrando su efectividad frente a perturbaciones y cambios abruptos en la carga. En la misma línea, Silva-Ortigoza et al.~\cite{ea_3} desarrollaron un esquema jerárquico basado en planitud diferencial, donde un lazo externo regula la velocidad de un motor DC y un lazo interno garantiza el seguimiento de voltaje mediante un convertidor Buck. Esta arquitectura demostró gran robustez ante variaciones paramétricas del sistema. Trabajos posteriores de los mismos autores extendieron este enfoque a la topología Full-Bridge Buck~\cite{ea_4}.
 
+De igual manera, Hernández-Márquez et al.~\cite{ea_5} modelaron un sistema Buck - Boost - Inverter- Motor DC 
+bajo una representación promedio y aplicaron control pasivo basado en pasividad incrementada, logrando regulación estable de velocidad. Soriano-Rangel et al.~\cite{ea_6} utilizaron un enfoque adaptativo pasivo para regular la salida de un convertidor Buck–Boost alimentando una carga de potencia constante (CPL), demostrando su viabilidad tanto en simulación como en experimentación.
 
+Otros aportes relevantes incluyen los trabajos de Gensior et al.~\cite{ea_8}, quienes combinan esquemas de control por planitud diferencial y pasividad para convertidores Boost y Buck–Boost, así como la contribución de He et al.~\cite{ea_9}, quienes aplican IDA–PBC y estimadores adaptativos para regular el voltaje de un convertidor Buck–Boost alimentando una CPL desconocida.
+
+Zhang et al.~\cite{ea_10} introducen un esquema pasivo unificado para un convertidor Buck - Boost alimentando cargas resistivas, CPL y baterías, utilizando un modelo en forma Euler–Lagrange con inyección de amortiguamiento para garantizar estabilidad tanto en modo Buck como en modo Boost.
+
+Finalmente, Hernández-Márquez et al.~\cite{ea_11} proponen un método ETEDPOF (Exact Tracking Error Dynamics Passive Output Feedback) para un sistema Buck - Boost - Inverter - Motor DC, demostrando seguimiento de trayectoria bidireccional incluso bajo perturbaciones y variaciones fuertes de carga. De forma complementaria, Sosa et al.~\cite{ea_12} extienden ETEDPOF al convertidor Boost utilizando un modelo promediado que considera pérdidas resistivas en componentes, obteniendo resultados experimentales y de simulación altamente concordantes.
+
+\subsection{Modos deslizantes de primer orden}
+
+El control por modos deslizantes de primer orden (First-Order Sliding Mode, FOSM) es una de las técnicas no lineales más empleadas debido a su robustez inherente ante perturbaciones externas, incertidumbres paramétricas y variaciones rápidas en la carga. La señal de control generada es típicamente discontinua, \(u \in \{0,1\}\), lo cual coincide de forma natural con la estructura conmutada de los convertidores DC–DC.
+
+Uno de los trabajos fundacionales en el área es el de Sabanovic et al.~\cite{ea_sabanovic}, donde se introduce formalmente el uso de sistemas de estructura variable en convertidores Buck y Boost mediante un lazo interno de corriente controlado por FOSM y un lazo externo de regulación de voltaje. El estudio establece las condiciones de existencia del modo deslizante y valida experimentalmente los resultados.
+
+Ahmed et al.~\cite{ea_13} implementaron un FOSM para un convertidor Buck tanto en simulación como en hardware, empleando una superficie de deslizamiento basada en corriente con un lazo externo PI de voltaje. Los resultados evidencian alta robustez ante variaciones de carga y voltaje de entrada. De manera similar, Al-Qaisi et al.~\cite{ea_14} diseñan un controlador SMC para un Buck utilizando modulación PWM, logrando eliminación de sobreimpulso, reducción del error en estado estacionario y estabilidad incluso bajo variaciones de carga significativas.
+
+En el caso de convertidores Boost, Inomoto et al.~\cite{ea_smbboost1} desarrollan un controlador FOSM basado en una superficie dependiente del voltaje, mostrando experimentalmente regulación estable ante perturbaciones de entrada y carga. De forma complementaria, Repecho et al.~\cite{ea_smc_repecho2018} proponen un esquema FOSM con control de frecuencia de conmutación mediante un comparador analógico, logrando operación robusta con frecuencia casi constante.
+
+Omaña-Butrón et al.~\cite{ea_omana} implementan un controlador FOSM para un convertidor Boost empleando electrónica analógica y un modulador $\Sigma\text{-}\Delta$ para su versión continua, demostrando robustez ante cambios abruptos de carga.
+
+Finalmente, Saied et al.~\cite{ea_bbfosm} aplican FOSM y modos deslizantes de segundo orden a un Buck–Boost en sistemas fotovoltaicos con irradiancia variable, validando su resistencia a incertidumbres y no linealidades del entorno.
+
+\subsection{Modos deslizantes de orden superior}
+
+El control por modos deslizantes de orden superior (High-Order Sliding Modes, HOSM) surge para mitigar el chattering característico del FOSM, manteniendo las propiedades de robustez del modo deslizante. El algoritmo más representativo es el Super-Twisting Algorithm (STA), el cual garantiza convergencia en tiempo finito mediante una ley de control continua.
+
+Rakhtala et al.~\cite{ea_15} comparan experimentalmente FOSM y SOSM en un convertidor Buck, evidenciando que el algoritmo Super–Twisting reduce el chattering y mejora la suavidad del voltaje de salida sin sacrificar robustez.
+
+En el área de convertidores integrados, Labbe et al.~\cite{ea_16} presentan una implementación analógica de SMC para un Buck fabricado en CMOS de 130\,nm, incorporando un PLL analógico que estabiliza la frecuencia promedio sin degradar el desempeño transitorio.
+
+En convertidores Boost, el trabajo \cite{ea_17} aplica linearización exacta por retroalimentación para enfrentar la dinámica de fase no mínima, proponiendo después un SOSM adaptativo que ajusta dinámicamente la ganancia sin requerir acotamiento en la derivada de las perturbaciones. El esquema garantiza estabilidad en tiempo finito y reduce el chattering asociado a ganancias excesivas.
+
+Velázquez-Velázquez et al.~\cite{ea_18} diseñan un algoritmo Super–Twisting saturado (SSTA) para seguimiento de corriente en un Boost, demostrando teórica y experimentalmente convergencia en tiempo finito con menor esfuerzo de control y ausencia de chattering.
+
+Omaña-Butrón et al.~\cite{ea_omana} comparan experimentalmente un FOSM y un SSTA implementados en un Boost real utilizando un modulador $\Sigma$–$\Delta$ analógico y un microcontrolador STM32, mostrando que el controlador continuo reduce vibraciones de alta frecuencia, aunque presenta pérdida temporal de convergencia bajo perturbaciones severas.
+
+Finalmente, en \cite{ea_20} se desarrolla un controlador Super–Twisting de alto orden (STSM) para un convertidor Buck–Boost empleado en sistemas PEMFC, mostrando mayor robustez ante variaciones de carga y entrada, menor distorsión instantánea de voltaje y mejor respuesta transitoria comparado con un PI tradicional.
+
+\bigskip
+
+El análisis global de la literatura muestra que los enfoques de control promedio, FOSM y HOSM han sido ampliamente estudiados en convertidores Buck, Boost y Buck–Boost. Sin embargo, pocos trabajos comparan sistemáticamente estas técnicas bajo un marco común que evalúe desempeño, robustez, suavidad de la señal de control y sensibilidad a perturbaciones. Esta ausencia motiva la necesidad de un estudio unificado que contraste estas metodologías en condiciones equivalentes.
 
 
 
@@ -257,8 +296,19 @@ Los medios que se emplearán para alcanzar el objetivo de esta investigación so
 \end{itemize}
 
 \section{Contenido del trabajo}
-De manera preeliminar el presente trabajo estara conformado por los siguientes capitulos, Capitulo 1,
-\newpage
+ De manera preliminar, el presente trabajo estará conformado por los siguientes capítulos.
+ En el Capítulo 1 se presenta la revisión del estado del arte, en el que se analizarán los trabajos relacionados con la implementación de esquemas de control promedio, control por modos deslizantes de primer orden y modos deslizantes de orden superior en las topologías de convertidores CD–CD Buck, Boost y Buck–Boost. Este capítulo incluirá también el planteamiento del problema, la justificación y los objetivos del trabajo.
+ 
+ El Capítulo 2 mostrará los modelos matemáticos correspondientes a cada una de las topologías de convertidores CD–CD mencionadas, partiendo tanto del modelo conmutado como del modelo promediado.
+ 
+ El Capítulo 3 comprenderá el desarrollo de esquemas de control basados en el modelo promedio para los convertidores CD–CD, así como su análisis de estabilidad y desempeño.
+ 
+ El Capítulo 4 estará conformado por el diseño de los controladores por modos deslizantes de primer orden para las topologías consideradas, incluyendo el análisis de existencia del modo deslizante, las superficies propuestas y la validación mediante simulación.
+ 
+ En el Capítulo 5 se abordará el diseño de los controladores por modos deslizantes de orden superior para las tres topologías propuestas, destacando las mejoras en suavidad del control, reducción de chattering y estabilidad en tiempo finito.
+ 
+ Finalmente, en el Capítulo 6 serán analizados los resultados obtenidos durante el desarrollo de esta investigación y se presentarán las conclusiones, así como las áreas de oportunidad relativas a la temática desarrollada.
+
 
 \section{Cronograma de actividades}
 En la Fig. \ref{fig1} se presenta el cronograma de actividades relacionado con esta propuesta de trabajo de tesis, con la finalidad de dar cumplimiento a los objetivos establecidos.
@@ -276,17 +326,89 @@ En la Fig. \ref{fig1} se presenta el cronograma de actividades relacionado con e
 %1
 \bibitem{ref_journal1}
 V. García-Rodríguez, R. Silva-Ortigoza, E. Hernández-Márquez, J. García-Sánchez, and H. Taud, “DC/DC Boost Converter–Inverter as Driver for a DC Motor: Modeling and Experimental Verification,”  \textit{Energies}, vol. 11, no. 8, p. 2044, Aug. 2018, doi: https://doi.org/10.3390/en11082044.
-‌
+‌%2
 \bibitem{ref_journal2}
-S.-K. Kim, “Output Voltage-Tracking Controller With Performance Recovery Property for DC/DC Boost Converters,” \textit{IEEE Transactions on Control Systems Technology}, vol. 27, no. 3, pp. 1301–1307, May 2019, doi: https://doi.org/10.1109/tcst.2018.2806366.
+S.-K. Kim, “Output Voltage-Tracking Controller With Performance Recovery Property for DC/DC Boost Converters,” \textit{IEEE Transactions on Control Systems Technologxy}, vol. 27, no. 3, pp. 1301–1307, May 2019, doi: https://doi.org/10.1109/tcst.2018.2806366.
+‌‌%3
+\bibitem{ea_1}
+S. Rao, M. Asad, Amit Kumar Singha, S. Rao, M. Asad, and Amit Kumar Singha, “Analysis and Design of a Digital Average Current-mode Controlled Buck Converter,” pp. 1–4, Dec. 2020, doi: https://doi.org/10.1109/pedes49360.2020.9379636.
+%4
+\bibitem{ea_2}
+C. Restrepo, Tine Konjedic, F. Flores‐Bahamonde, Enric Vidal-Idiarte, J. Calvente, and R. Giral, “Multisampled Digital Average Current Controls of the Versatile Buck–Boost Converter,” IEEE Journal of Emerging and Selected Topics in Power Electronics, vol. 7, no. 2, pp. 879–890, Jun. 2019, doi: https://doi.org/10.1109/jestpe.2018.2888980.
+‌%5
+\bibitem{ea_7}
+J. Weber, A. Gensior, H. Guldner, and O. Woywode, “Flatness based control for chaotic boost converters,” 2004 IEEE 35th Annual Power Electronics Specialists Conference (IEEE Cat. No.04CH37551), pp. 1601–1604, Nov. 2004, doi: https://doi.org/10.1109/pesc.2004.1355664.
+\bibitem{ea_3}
+R. Silva-Ortigoza, C. Márquez-Sánchez, F. Carrizosa-Corral, M. Antonio-Cruz, J. M. Alba-Martínez, and G. Saldaña-González, “Hierarchical Velocity Control Based on Differential Flatness for a DC/DC Buck Converter-DC Motor System,” Mathematical Problems in Engineering, vol. 2014, pp. 1–12, 2014, doi: https://doi.org/10.1155/2014/912815.
+‌%6
+\bibitem{ea_4}
+Ramón Silva-Ortigoza et al., “Robust Flatness-Based Tracking Control for a ‘Full-Bridge Buck Inverter–DC Motor’ System,” Mathematics, vol. 10, no. 21, pp. 4110–4110, Nov. 2022, doi: https://doi.org/10.3390/math10214110.
+%7
+\bibitem{ea_5}
+E. Hernandez-Marquez et al., “Regulation of the DC/DC Buck-Boost Converter-Inverter-DC Motor System: Sensorless Passivity Based Control,” Nov. 2017, doi: https://doi.org/10.1109/icmeae.2017.13.
+%8
+\bibitem{ea_6}
+‌C. Soriano-Rangel, W. He, F. Mancilla-David, and R. Ortega, “Voltage Regulation in Buck–Boost Converters Feeding an Unknown Constant Power Load: An Adaptive Passivity-Based Control,” IEEE Transactions on Control Systems Technology, vol. 29, no. 1, pp. 395–402, Jan. 2020, doi: https://doi.org/10.1109/tcst.2019.2959535.
+‌%9
+
+‌%10
+\bibitem{ea_8}
+Albrecht Gensior, O. Woywode, J. Rudolph, and H. Güldner, “On Differential Flatness, Trajectory Planning, Observers, and Stabilization for DC–DC Converters,” IEEE transactions on circuits and systems, vol. 53, no. 9, pp. 2000–2010, Sep. 2006, doi: https://doi.org/10.1109/tcsi.2006.880342.
+‌%11
+\bibitem{ea_9}
+W. He, R. Ortega, J. E. Machado, and S. Li, “An Adaptive Passivity‐Based Controller of a Buck‐Boost Converter with a Constant Power Load,” vol. 21, no. 1, pp. 581–595, Mar. 2018, doi: https://doi.org/10.1002/asjc.1751.
+%12
+\bibitem{ea_10}
+‌F. Zhang, J. Li, G. Zhu, R. Hu, Y. Qu, and Y. Zhang, “Passivity-Based Control of Buck-Boost Converter for Different Loads Research,” Journal of Electrical and Computer Engineering, vol. 2023, pp. 1–10, Jun. 2023, doi: https://doi.org/10.1155/2023/5558246.
+‌%13
+\bibitem{ea_11}
+E. Hernandez-Marquez, R. Silva-Ortigoza, J. R. Garcia-Sanchez, M. Marcelino-Aranda, and G. Saldana-Gonzalez, “A DC/DC Buck-Boost Converter–Inverter–DC Motor System: Sensorless Passivity-Based Control,” IEEE Access, vol. 6, pp. 31486–31492, Jan. 2018, doi: https://doi.org/10.1109/access.2018.2846614.
+‌%14
+\bibitem{ea_12}
+K. Sosa, M. Spinetti, and Eliezer Colina-Morles, “Planificacion de trayectorias del convertidor boost por realimentacion de la salida pasiva de la dinamica exacta del error de seguimiento (ETEDPOF),” Ciencia e Ingeniería, vol. 46, no. 1, pp. 47–54, 2025, Accessed: Dec. 05, 2025. [Online]. Available: http://erevistas.saber.ula.ve/index.php/cienciaeingenieria/article/view/20610/0
+\bibitem{ea_sabanovic}
+A. Sabanovic, N. Sabanovic, and K. Ohnishi, “Sliding modes in power converters and motion control systems,” International Journal of Control, vol. 57, no. 5, pp. 1237–1259, May 1993, doi: https://doi.org/10.1080/00207179308934443.
 ‌
-\bibitem{ref_journal3}
-[1]L. Gil-Antonio, B. Saldivar, Otniel Portillo-Rodriguez, G. Vazquez-Guzman, and S. Montes, “Trajectory Tracking Control for a Boost Converter Based on the Differential Flatness Property,” IEEE access, vol. 7, pp. 63437–63446, Jan. 2019, doi: https://doi.org/10.1109/access.2019.2916472.
+‌%15
+\bibitem{ea_13}
+M. Ahmed, Mikko Kuisma, K. Tolsa, and Pertti Silventoinen, “Implementing sliding mode control for buck converter,” Oct. 2003, doi: https://doi.org/10.1109/pesc.2003.1218129.
+%16
+\bibitem{ea_14}
+M. A. Fadel Al-Qaisi, M. A. Shehab, A. Al-Gizi, and M. Al-Saadi, “High performance DC/DC buck converter using sliding mode controller,” International Journal of Power Electronics and Drive System (IJPEDS), vol. 10, no. 2088–8694, pp. 1806–1814, Dec. 2019, doi: https://doi.org/10.11591/ijpeds.v10.i4.1806-1814.
+
+\bibitem{ea_smbboost1}
+R. S. Inomoto, Jose, and S. Filho, “Boost Converter Control of PV System Using Sliding Mode Control With Integrative Sliding Surface,” IEEE Journal of Emerging and Selected Topics in Power Electronics, vol. 10, no. 5, pp. 5522–5530, Oct. 2022, doi: https://doi.org/10.1109/jestpe.2022.3158247.
 ‌
+\bibitem{ea_smc_repecho2018}
+V. Repecho, D. Biel, J. M. Olm, and E. Fossas, “Robust sliding mode control of a DC/DC Boost converter with switching frequency regulation,” Journal of the Franklin Institute, vol. 355, no. 13, pp. 5367–5383, Sep. 2018, doi: https://doi.org/10.1016/j.jfranklin.2018.05.028.
+‌
+\bibitem{ea_omana}
+A. J. Omaña-Butrón, A. Leines-Martínez, A. Ramírez-Díaz, R. Galván-Guerra, and J. E. Velázquez-Velázquez, “Implementación de Controladores por Modos Deslizantes en un Convertidor Boost,” Pädi Boletín Científico de Ciencias Básicas e Ingenierías del ICBI, vol. 8, no. 15, pp. 82–91, Jul. 2020, doi: https://doi.org/10.29057/icbi.v8i15.5764.
 
+\bibitem{ea_sirasilva}
+H. J. Sira-Ramirez and Ramón Silva-Ortigoza, Control Design Techniques in Power Electronics Devices. Springer Science \&	 Business Media, 2006.
+ ‌
+ \bibitem{ea_bbfosm}
+ J. Saied and R. Omar, “First and Second-Order Sliding Mode Control Strategy of Buck-Boost Converter for Photovoltaic System,” Journal of Engineering and Sustainable Development, vol. 29, no. 6, pp. 785–793, Nov. 2025, doi: https://doi.org/10.31272/jeasd.2630.
+ ‌
+\bibitem{ea_15}
+Seyed Mehdi Rakhtala, Monazzahalsadat Yasoubi, and S. Hassan HosseinNia, “Design of second order sliding mode and sliding mode algorithms: a practical insight to DC-DC buck converter,” IEEE/CAA Journal of Automatica Sinica, vol. 4, no. 3, pp. 483–497, Jan. 2017, doi: https://doi.org/10.1109/jas.2017.7510550.
+‌%18
+\bibitem{ea_16}
+B. Labbe, B. Allard, Xuefang Lin-Shi, and D. Chesneau, “An Integrated Sliding-Mode Buck Converter With Switching Frequency Control for Battery-Powered Applications,” IEEE transactions on power electronics, vol. 28, no. 9, pp. 4318–4326, Sep. 2013, doi: https://doi.org/10.1109/tpel.2012.2226754.
+‌%19
+\bibitem{ea_17}
+J. Sun, J. Xia, S. Ding, and X. Yu, “Exact-Feedback-Linearization-Based Adaptive Second-Order Sliding Mode Control Design for DC–DC Boost Converters,” IEEE Transactions on Industrial Electronics, pp. 1–11, Jan. 2024, doi: https://doi.org/10.1109/tie.2024.3476994.
 
+\bibitem{ea_18}
+Juan-Eduardo Velázquez-Velázquez, R. Galván-Guerra, José-Antonio Ortega-Pérez, Yair Lozano-Hernández, and Raúl Villafuerte-Segura, “Finite-Time Current Tracking in Boost Converters by Using a Saturated Super-Twisting Algorithm,” Complexity, vol. 2020, pp. 1–16, Oct. 2020, doi: https://doi.org/10.1155/2020/7326157.
 
-
+\bibitem{ea_19}
+C. S. Sachin and Sri. Gurunayk Nayak, “Design and simulation for sliding mode control in DC-DC boost converter,” Oct. 2017, doi: https://doi.org/10.1109/cesys.2017.8321317.
+‌%22
+\bibitem{ea_20}
+R. Ma, Y. Wu, E. Breaz, Yigeng Huangfu, Pascal Briois, and F. Gao, “High-order Sliding Mode Control of DC-DC Converter for PEM Fuel Cell Applications,” HAL (Le Centre pour la Communication Scientifique Directe), Sep. 2018, doi: https://doi.org/10.1109/ias.2018.8544655.
+‌
 \end{thebibliography}
 
 \end{document}
