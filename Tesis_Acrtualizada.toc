@@ -10,5 +10,5 @@
 \contentsline {subsection}{\numberline {1.3.2}Objetivos particulares}{7}{}%
 \contentsline {section}{\numberline {1.4}Medios a emplear}{8}{}%
 \contentsline {section}{\numberline {1.5}Contenido del trabajo}{8}{}%
-\contentsline {section}{\numberline {1.6}Cronograma de actividades}{9}{}%
-\contentsline {chapter}{Referencias}{10}{}%
+\contentsline {section}{\numberline {1.6}Cronograma de actividades}{10}{}%
+\contentsline {chapter}{Referencias}{11}{}%

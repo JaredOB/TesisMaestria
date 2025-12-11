@@ -163,7 +163,7 @@
 
 Los convertidores electrónicos de potencia son elementos presentes en diversos sistemas que requieren la transformación de energía eléctrica. Estas aplicaciones incluyen, entre otras, energías renovables, aeronáutica, vehículos eléctricos, robots y telecomunicaciones \cite{ref_journal1}. Estas aplicaciones requieren convertidores CD–CD capaces de mantener un voltaje de salida en un nivel deseado en un amplio rango de operación, aun en presencia de perturbaciones de carga, cambios en la fuente de entrada e incertidumbre de parámetros \cite{ref_journal2}, por lo cual resulta fundamental el desarrollo de técnicas de control que permitan satisfacer las necesidades energéticas de estos distintos tipos de aplicaciones.
 
-Para estas aplicaciones, las topologías Buck, Boost y Buck–Boost representan bloques fundamentales debido a su capacidad para proporcionar niveles de voltaje menores, mayores o invertidos con respecto al voltaje de entrada. Sin embargo, la naturaleza conmutada de estos convertidores introduce dinámicas no lineales y sensibilidad ante perturbaciones, lo que dificulta garantizar una regulación precisa bajo condiciones de operación variadas \cite{ref_journal3, ref_journal4, ref_journal5}.
+Para estas aplicaciones, las topologías Buck, Boost y Buck–Boost representan bloques fundamentales debido a su capacidad para proporcionar niveles de voltaje menores o mayores con respecto al voltaje de entrada. Sin embargo, la naturaleza conmutada de estos convertidores introduce dinámicas no lineales y sensibilidad ante perturbaciones, lo que dificulta garantizar una regulación precisa bajo condiciones de operación variadas \cite{ref_journal3, ref_journal4, ref_journal5}.
 
 En este contexto, el empleo de estrategias de control avanzadas se vuelve necesario para mejorar el desempeño dinámico, la robustez y la confiabilidad de estos sistemas. La presente tesis aborda el análisis, diseño y evaluación de técnicas de control aplicadas a estas topologías, con el fin de contribuir a su operación eficiente en escenarios reales.
 
@@ -223,8 +223,8 @@ Finalmente, en \cite{ea_20} se desarrolla un controlador Super–Twisting de alt
 
 \bigskip
 
-El análisis global de la literatura muestra que los enfoques de control promedio, FOSM y HOSM han sido ampliamente estudiados en convertidores Buck, Boost y Buck–Boost. Sin embargo, pocos trabajos comparan sistemáticamente estas técnicas bajo un marco común que evalúe desempeño, robustez, suavidad de la señal de control y sensibilidad a perturbaciones. Esta ausencia motiva la necesidad de un estudio unificado que contraste estas metodologías en condiciones equivalentes.
-
+El análisis de la literatura muestra que los enfoques de control promedio, FOSM y HOSM han sido ampliamente estudiados en convertidores Buck, Boost y Buck–Boost. Sin embargo, pocos trabajos comparan sistemáticamente estas técnicas bajo un marco común que evalúe desempeño, robustez, suavidad de la señal de control y sensibilidad a perturbaciones. Esta ausencia motiva la necesidad de un estudio unificado que contraste estas metodologías en condiciones equivalentes.
+assdfsdf
 
 
 \section{Planteamiento y justificaci\'on del problema}
@@ -274,17 +274,17 @@ Los medios que se emplearán para alcanzar el objetivo de esta investigación so
 
 \item Computadora de escritorio para la implementación del entorno de simulación y la interfaz con las tarjetas de adquisición de datos.
 
-\item MATLAB–Simulink–Simscape Electrical 2025b para la modelación, simulación y evaluación de los esquemas de control.
+\item MATLAB–Simulink–Simscape Electrical 2025b para la modelación, simulación y experimentación de los esquemas de control.
 
 \item Entorno de desarrollo integrado TeXStudio para la edición del documento en \LaTeX.
 
-\item Conexión a internet para acceso a repositorios, bibliografía, herramientas de desarrollo y  control de versión.
+\item Conexión a internet para acceso bases de datos cientificas, herramientas de desarrollo y control de versión.
 
 \item Software para control de versiones: Git y GitHub.
 
-\item Componentes electrónicos pasivos (resistencias, inductores, capacitores).
+\item Componentes electrónicos pasivos para la construcción de los convertidores CD-CD Buck, Boost y Buck-Boost.
 
-\item Fuentes de alimentación de corriente directa programables.
+\item Fuente de alimentación de corriente directa.
 
 \item Tarjeta de adquisición de datos dSPACE DS1104.
 
@@ -309,20 +309,18 @@ Los medios que se emplearán para alcanzar el objetivo de esta investigación so
  
  Finalmente, en el Capítulo 6 serán analizados los resultados obtenidos durante el desarrollo de esta investigación y se presentarán las conclusiones, así como las áreas de oportunidad relativas a la temática desarrollada.
 
-
+\newpage
 \section{Cronograma de actividades}
 En la Fig. \ref{fig1} se presenta el cronograma de actividades relacionado con esta propuesta de trabajo de tesis, con la finalidad de dar cumplimiento a los objetivos establecidos.
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[scale=0.75]{figuras/Cronograma.pdf}
+	\includegraphics[scale=0.8]{figuras/Cronograma.pdf}
 	\caption{Cronograma de actividades.}
 	\label{fig1}
 \end{figure}
-1
 \begin{thebibliography}{99}
 \addcontentsline{toc}{chapter}{Referencias}	
-
 %1
 \bibitem{ref_journal1}
 V. García-Rodríguez, R. Silva-Ortigoza, E. Hernández-Márquez, J. García-Sánchez, and H. Taud, “DC/DC Boost Converter–Inverter as Driver for a DC Motor: Modeling and Experimental Verification,”  \textit{Energies}, vol. 11, no. 8, p. 2044, Aug. 2018, doi: https://doi.org/10.3390/en11082044.
